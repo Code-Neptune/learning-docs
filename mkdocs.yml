@@ -1,3 +1,38 @@
-site_name: My Learning Docs
+site_name: My Learning Hub
+site_url: https://learning-docs.pages.dev # Update this later
+repo_url: https://github.com/Code-Neptune/learning-docs
+edit_uri: edit/main/docs/
+
 theme:
   name: material
+  palette: 
+    # Toggle for Dark/Light mode
+    - scheme: default
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: teal
+      accent: purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs        # Top level categories as tabs
+    - navigation.sections    # Group sidebar items
+    - navigation.expand      # Open folders by default
+    - search.suggest         # Intelligent search
+    - search.highlight       # Highlight search terms
+    - content.code.copy      # Copy button on code blocks
+
+markdown_extensions:
+  - admonition               # For "Note", "Warning" boxes
+  - pymdownx.highlight:      # Syntax highlighting
+      anchor_linenums: true
+  - pymdownx.superfences     # Better code blocks
+  - pymdownx.tabbed:         # Tabs inside content
+      alternate_style: true 
+  - toc:
+      permalink: true        # Link to specific headers
